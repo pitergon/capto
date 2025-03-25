@@ -93,10 +93,9 @@ To add a new document type or language:
 
 ## Template Filling (DOCX)
 - Placeholders in the template correspond to field names in the configuration.
-- Placeholders must be enclosed in curly brackets `{}`.
+- Placeholders must be enclosed in double curly brackets `{{}}`.
 - Insert placeholders as plain text to avoid formatting issues.
-- Duplicate fields are inserted where placeholders exist, and paragraph blocks containing placeholders are duplicated within the nearest heading boundaries.
-
+- If a field contains multiple values (e.g., a list of extracted data), each value is inserted at the corresponding placeholder in the template. If a placeholder appears within a paragraph, the entire block of paragraphs is duplicated for each value. The duplication is confined within the boundaries of the nearest headings, ensuring that repeated content remains structured and contextually relevant.
 ---
 This system provides a structured and flexible way to extract and process document data efficiently.
 
